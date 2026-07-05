@@ -1,0 +1,13 @@
+name: Plugin manifest feedback
+description: Suggest changes to opensciflow.yaml fields or examples.
+title: "[manifest] "
+labels: ["manifest-feedback"]
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: Which field, example, or validation rule should change?
+    validations:
+      required: true
+

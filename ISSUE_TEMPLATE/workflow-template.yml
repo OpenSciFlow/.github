@@ -1,0 +1,18 @@
+name: Workflow template proposal
+description: Propose or review an AI for Science workflow template.
+title: "[workflow-template] "
+labels: ["workflow-template"]
+body:
+  - type: input
+    id: workflow
+    attributes:
+      label: Workflow name
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Scientific task and expected outputs
+    validations:
+      required: true
+

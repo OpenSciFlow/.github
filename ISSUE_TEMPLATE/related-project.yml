@@ -1,0 +1,24 @@
+name: Add or correct related project
+description: Add a project to the landscape or correct an existing entry.
+title: "[related-project] "
+labels: ["related-project"]
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: GitHub or website
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Description or correction
+    validations:
+      required: true
+
