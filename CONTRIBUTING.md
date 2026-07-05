@@ -2,6 +2,10 @@
 
 OpenSciFlow is currently an early initiative. Contributions should be small, reviewable, and grounded in real tools or workflows.
 
+For role-specific contribution paths, see:
+
+- https://github.com/OpenSciFlow/docs/blob/main/reference/contribution-routes.md
+
 ## Good first contributions
 
 - Add or correct a related project.
@@ -26,4 +30,3 @@ OpenSciFlow is currently an early initiative. Contributions should be small, rev
 - Are required inputs/outputs explicit?
 - Is execution local/HPC-safe?
 - Are limitations stated?
-
