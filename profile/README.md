@@ -22,13 +22,30 @@ OpenSciFlow is an early open initiative for modular, reproducible, local-first, 
 
 ## First repositories
 
-- `awesome-ai4s-workflows`: curated project landscape.
-- `plugin-manifest`: `opensciflow.yaml` draft standard.
-- `workflow-templates`: reusable AI for Science workflow templates.
-- `biopilot-prototype`: first protein-computing reference prototype.
-- `docs`: user and contributor documentation.
-- `whitepaper`: position paper drafts.
-- `community`: governance, outreach, and community process.
+- [`awesome-ai4s-workflows`](https://github.com/OpenSciFlow/awesome-ai4s-workflows): curated project landscape.
+- [`plugin-manifest`](https://github.com/OpenSciFlow/plugin-manifest): `opensciflow.yaml` draft standard.
+- [`workflow-templates`](https://github.com/OpenSciFlow/workflow-templates): reusable AI for Science workflow templates.
+- [`biopilot-prototype`](https://github.com/OpenSciFlow/biopilot-prototype): first protein-computing reference prototype.
+- [`docs`](https://github.com/OpenSciFlow/docs): user and contributor documentation.
+- [`whitepaper`](https://github.com/OpenSciFlow/whitepaper): position paper drafts.
+- [`community`](https://github.com/OpenSciFlow/community): governance, outreach, and community process.
+
+## Current status
+
+As of 2026-07-05:
+
+- The organization and seed repositories are public.
+- `awesome-ai4s-workflows` has 47 seed projects and category pages.
+- `plugin-manifest` and `workflow-templates` have GitHub Actions validation checks.
+- `biopilot-prototype` has an MVP runbook, sample-data policy, run-record spec, and API draft.
+- Public outreach has started as correction requests, not partnership claims.
+
+Pinned entry points:
+
+- Landscape: https://github.com/OpenSciFlow/awesome-ai4s-workflows
+- Manifest draft: https://github.com/OpenSciFlow/plugin-manifest
+- Workflow templates: https://github.com/OpenSciFlow/workflow-templates
+- Position paper: https://github.com/OpenSciFlow/whitepaper
 
 ## How to participate
 
@@ -42,4 +59,3 @@ The easiest contributions are:
 - review reproducibility requirements.
 
 We do not claim partnership with listed projects unless explicitly agreed by their maintainers.
-
