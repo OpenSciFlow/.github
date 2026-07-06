@@ -63,7 +63,7 @@ It should execute only reviewed command templates or reviewed wrapper submission
 
 As of 2026-07-07, OpenSciFlow is an early public draft.
 
-- **83+ projects mapped** across AI for Science agents, workflow engines, model hubs, package/container systems, local/HPC execution, and reproducibility tools.
+- **83 projects mapped and assessed** across AI for Science agents, workflow engines, model hubs, package/container systems, local/HPC execution, and reproducibility tools.
 - **7 example plugin manifests drafted**, including Boltz, ProteinMPNN, MACE, DiffDock, MDAnalysis, GROMACS, and ProteinFlux.
 - **Command-template guardrails drafted**, including placeholder validation, reviewed-wrapper metadata, disallowed shell-fragment checks, and rendering fixtures.
 - **6 workflow templates drafted**, with DAG and artifact-handoff validation, including a GROMACS/Slurm reviewed-wrapper workflow.
