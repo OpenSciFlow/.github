@@ -40,6 +40,7 @@ It currently includes:
 
 - A lightweight `opensciflow.yaml` plugin manifest draft for scientific tools and models.
 - A reusable workflow-template library, starting with protein-computing workflows.
+- A skill/protocol adapter layer that teaches AI agents how to use manifests, workflow templates, and run records.
 - A curated landscape of AI for Science agents, workflow engines, model hubs, local/HPC execution tools, and reproducibility tools.
 - A local-agent execution contract that restricts execution to reviewed command templates.
 - A reference prototype called BioPilot for local protein-computing workflows.
@@ -66,6 +67,7 @@ As of 2026-07-06, OpenSciFlow is an early public draft.
 - **7 example plugin manifests drafted**, including Boltz, ProteinMPNN, MACE, DiffDock, MDAnalysis, GROMACS, and ProteinFlux.
 - **Command-template guardrails drafted**, including placeholder validation, disallowed shell-fragment checks, and minimal rendering fixtures.
 - **5 workflow templates drafted**, with DAG and artifact-handoff validation for initial protein-computing workflows.
+- **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, examples, and GitHub issue templates for agent adoption.
 - **R0-R6 readiness levels proposed** for describing whether a tool/model is inspectable, installable, executable, citable, and reproducible.
 - **1 local-agent contract drafted** to restrict execution to reviewed manifest-defined commands.
 - **BioPilot prototype defined** with a protocol compliance plan for the first local protein-computing reference implementation.
@@ -74,6 +76,7 @@ As of 2026-07-06, OpenSciFlow is an early public draft.
 
 - [`plugin-manifest`](https://github.com/OpenSciFlow/plugin-manifest): `opensciflow.yaml` draft standard.
 - [`workflow-templates`](https://github.com/OpenSciFlow/workflow-templates): reusable AI for Science workflow templates.
+- [`opensciflow-skill`](https://github.com/OpenSciFlow/opensciflow-skill): agent-facing skill and protocol adapter layer.
 - [`awesome-ai4s-workflows`](https://github.com/OpenSciFlow/awesome-ai4s-workflows): curated project landscape.
 - [`biopilot-prototype`](https://github.com/OpenSciFlow/biopilot-prototype): first protein-computing reference prototype.
 - [`whitepaper`](https://github.com/OpenSciFlow/whitepaper): position paper drafts.
@@ -86,9 +89,11 @@ As of 2026-07-06, OpenSciFlow is an early public draft.
 - See the near-term roadmap: https://github.com/OpenSciFlow/docs/blob/main/reference/roadmap.md
 - Check the current protocol status: https://github.com/OpenSciFlow/docs/blob/main/reference/protocol-status.md
 - Review the v0.2 RFC outline: https://github.com/OpenSciFlow/docs/blob/main/reference/v0.2-rfc-outline.md
+- Review the agent skill draft: https://github.com/OpenSciFlow/opensciflow-skill
 
 - Correct a project description in the landscape map.
 - Review a plugin manifest field.
+- Review skill refusal behavior.
 - Suggest missing license/citation metadata.
 - Add an HPC/Slurm execution requirement.
 - Point out an unsafe local-agent behavior.
