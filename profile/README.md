@@ -64,10 +64,11 @@ As of 2026-07-06, OpenSciFlow is an early public draft.
 
 - **79+ projects mapped** across AI for Science agents, workflow engines, model hubs, package/container systems, local/HPC execution, and reproducibility tools.
 - **7 example plugin manifests drafted**, including Boltz, ProteinMPNN, MACE, DiffDock, MDAnalysis, GROMACS, and ProteinFlux.
+- **Command-template guardrails drafted**, including placeholder validation, disallowed shell-fragment checks, and minimal rendering fixtures.
 - **5 workflow templates drafted**, with DAG and artifact-handoff validation for initial protein-computing workflows.
 - **R0-R6 readiness levels proposed** for describing whether a tool/model is inspectable, installable, executable, citable, and reproducible.
 - **1 local-agent contract drafted** to restrict execution to reviewed manifest-defined commands.
-- **BioPilot prototype defined** as the first local protein-computing reference implementation.
+- **BioPilot prototype defined** with a protocol compliance plan for the first local protein-computing reference implementation.
 
 ## Entry Points
 
@@ -84,6 +85,7 @@ As of 2026-07-06, OpenSciFlow is an early public draft.
 - Start from the current contribution queue: https://github.com/OpenSciFlow/community/blob/main/contribution-queue.md
 - See the near-term roadmap: https://github.com/OpenSciFlow/docs/blob/main/reference/roadmap.md
 - Check the current protocol status: https://github.com/OpenSciFlow/docs/blob/main/reference/protocol-status.md
+- Review the v0.2 RFC outline: https://github.com/OpenSciFlow/docs/blob/main/reference/v0.2-rfc-outline.md
 
 - Correct a project description in the landscape map.
 - Review a plugin manifest field.
