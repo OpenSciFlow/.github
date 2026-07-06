@@ -1,0 +1,33 @@
+name: Sample data metadata correction
+description: Add or correct sample-data license, citation, size, hash, or provenance metadata.
+title: "[sample-data] "
+labels: ["sample-data", "metadata-review"]
+body:
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset name
+      description: Which sample-data candidate or dataset is this about?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+      description: Link to the upstream dataset, package, DOI, repository, or documentation.
+    validations:
+      required: true
+  - type: textarea
+    id: metadata
+    attributes:
+      label: Metadata correction
+      description: Include license, citation, file size, hash, retrieval command, or reuse notes.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Boundaries
+      options:
+        - label: This issue does not request committing large dataset files to git.
+          required: true

@@ -1,0 +1,33 @@
+name: Protocol or RFC feedback
+description: Review command templates, readiness levels, run records, or v0.2 protocol decisions.
+title: "[protocol] "
+labels: ["protocol", "rfc-feedback"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Protocol area
+      options:
+        - Command templates
+        - Readiness levels
+        - Run records
+        - Workflow artifact handoff
+        - Model weights and sample data
+        - Local-agent refusal rules
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: What should be changed, clarified, required, or removed?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example case
+      description: Link to a real tool, workflow, model, HPC case, or reproducibility case if possible.
+    validations:
+      required: false

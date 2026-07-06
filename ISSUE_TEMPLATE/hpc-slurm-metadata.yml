@@ -1,0 +1,33 @@
+name: HPC or Slurm metadata feedback
+description: Review local/HPC execution assumptions for a manifest or workflow.
+title: "[hpc-slurm] "
+labels: ["hpc-slurm", "metadata-review"]
+body:
+  - type: input
+    id: target
+    attributes:
+      label: Manifest, workflow, or project
+      description: Which entry should be reviewed?
+    validations:
+      required: true
+  - type: textarea
+    id: cluster_context
+    attributes:
+      label: HPC context
+      description: Which scheduler, module, container, GPU, filesystem, or job-submission assumption is missing or wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_metadata
+    attributes:
+      label: Suggested metadata
+      description: Include Slurm options, modules, container notes, model-weight staging, or run-record fields if relevant.
+    validations:
+      required: false
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Boundaries
+      options:
+        - label: This is feedback only, not a claim that my institution or project has adopted OpenSciFlow.
+          required: true

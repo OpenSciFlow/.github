@@ -11,6 +11,8 @@ For role-specific contribution paths, see:
 - Add or correct a related project.
 - Improve a plugin manifest example.
 - Add license/citation metadata.
+- Review HPC/Slurm metadata.
+- Correct sample-data license, citation, size, or hash metadata.
 - Review a workflow template.
 - Improve documentation or translations.
 
