@@ -66,7 +66,7 @@ As of 2026-07-07, OpenSciFlow is an early public draft.
 - **83+ projects mapped** across AI for Science agents, workflow engines, model hubs, package/container systems, local/HPC execution, and reproducibility tools.
 - **7 example plugin manifests drafted**, including Boltz, ProteinMPNN, MACE, DiffDock, MDAnalysis, GROMACS, and ProteinFlux.
 - **Command-template guardrails drafted**, including placeholder validation, reviewed-wrapper metadata, disallowed shell-fragment checks, and rendering fixtures.
-- **5 workflow templates drafted**, with DAG and artifact-handoff validation for initial protein-computing workflows.
+- **6 workflow templates drafted**, with DAG and artifact-handoff validation, including a GROMACS/Slurm reviewed-wrapper workflow.
 - **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, four structured examples, Slurm execution-request coverage, and reviewed-wrapper guardrails for agent adoption.
 - **R0-R6 readiness levels proposed** for describing whether a tool/model is inspectable, installable, executable, citable, and reproducible.
 - **1 local-agent contract drafted** to restrict execution to reviewed manifest-defined commands.
