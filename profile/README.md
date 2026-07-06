@@ -35,7 +35,7 @@ OpenSciFlow is an early open initiative for modular, reproducible, local-first, 
 As of 2026-07-06:
 
 - The organization and seed repositories are public.
-- `awesome-ai4s-workflows` has 53 seed projects, including a scientific-models category.
+- `awesome-ai4s-workflows` has 65 seed projects, including a scientific-models category.
 - `plugin-manifest` has 7 example manifests, including Boltz, ProteinMPNN, MACE, DiffDock, MDAnalysis, GROMACS, and ProteinFlux drafts.
 - `plugin-manifest` and `workflow-templates` have GitHub Actions validation checks.
 - `biopilot-prototype` has an MVP runbook, sample-data policy, run-record spec, and API draft.
