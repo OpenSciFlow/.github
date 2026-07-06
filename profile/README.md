@@ -81,6 +81,9 @@ As of 2026-07-06, OpenSciFlow is an early public draft.
 
 ## Good First Contributions
 
+- Start from the current contribution queue: https://github.com/OpenSciFlow/community/blob/main/contribution-queue.md
+- See the near-term roadmap: https://github.com/OpenSciFlow/docs/blob/main/reference/roadmap.md
+
 - Correct a project description in the landscape map.
 - Review a plugin manifest field.
 - Suggest missing license/citation metadata.
