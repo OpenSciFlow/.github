@@ -1,0 +1,16 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">OpenSciFlow logo</title>
+  <desc id="desc">A blue and green workflow-node mark for OpenSciFlow.</desc>
+  <rect width="256" height="256" rx="56" fill="#F8FAFC"/>
+  <circle cx="76" cy="82" r="26" fill="#2563EB"/>
+  <circle cx="180" cy="82" r="26" fill="#0891B2"/>
+  <circle cx="128" cy="174" r="30" fill="#059669"/>
+  <path d="M99 86H157" stroke="#0F172A" stroke-width="13" stroke-linecap="round"/>
+  <path d="M89 106L116 150" stroke="#0F172A" stroke-width="13" stroke-linecap="round"/>
+  <path d="M167 106L140 150" stroke="#0F172A" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="76" cy="82" r="11" fill="#FFFFFF"/>
+  <circle cx="180" cy="82" r="11" fill="#FFFFFF"/>
+  <circle cx="128" cy="174" r="12" fill="#FFFFFF"/>
+  <path d="M82 213H174" stroke="#2563EB" stroke-width="10" stroke-linecap="round"/>
+  <path d="M104 232H152" stroke="#059669" stroke-width="10" stroke-linecap="round"/>
+</svg>
