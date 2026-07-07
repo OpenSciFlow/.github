@@ -67,7 +67,7 @@ As of 2026-07-07, OpenSciFlow is an early public draft.
 - **7 example plugin manifests drafted**, including Boltz, ProteinMPNN, MACE, DiffDock, MDAnalysis, GROMACS, and ProteinFlux.
 - **Manifest field policy and schema guardrails drafted**, including explicit required-field boundaries, license/citation propagation, model-weight metadata checks, placeholder validation, normalized scheduler fields, reviewed-wrapper metadata, and disallowed shell-fragment checks.
 - **7 workflow templates drafted**, with DAG and artifact-handoff validation, including GROMACS/Slurm and MACE/Slurm reviewed-wrapper workflows.
-- **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, five structured examples, Slurm execution-request coverage, BioPilot run-record crosswalk, and reviewed-wrapper guardrails for agent adoption.
+- **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, five structured examples, Slurm execution-request coverage, coding-agent behavior review, BioPilot run-record crosswalk, and reviewed-wrapper guardrails for agent adoption.
 - **R0-R6 readiness levels proposed** for describing whether a tool/model is inspectable, installable, executable, citable, and reproducible.
 - **1 local-agent contract drafted** to restrict execution to reviewed manifest-defined commands.
 - **BioPilot prototype defined** with a protocol compliance plan, demo request schema, blocked plan-response fixture, and run-record validation path for the first local protein-computing reference implementation.
