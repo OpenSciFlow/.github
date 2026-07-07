@@ -70,7 +70,7 @@ As of 2026-07-07, OpenSciFlow is an early public draft.
 - **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, five structured examples, Slurm execution-request coverage, BioPilot run-record crosswalk, and reviewed-wrapper guardrails for agent adoption.
 - **R0-R6 readiness levels proposed** for describing whether a tool/model is inspectable, installable, executable, citable, and reproducible.
 - **1 local-agent contract drafted** to restrict execution to reviewed manifest-defined commands.
-- **BioPilot prototype defined** with a protocol compliance plan, demo request schema, and run-record validation path for the first local protein-computing reference implementation.
+- **BioPilot prototype defined** with a protocol compliance plan, demo request schema, blocked plan-response fixture, and run-record validation path for the first local protein-computing reference implementation.
 
 ## Entry Points
 
