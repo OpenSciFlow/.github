@@ -65,7 +65,7 @@ As of 2026-07-07, OpenSciFlow is an early public draft.
 
 - **83 projects mapped and assessed** across AI for Science agents, workflow engines, model hubs, package/container systems, local/HPC execution, and reproducibility tools.
 - **7 example plugin manifests drafted**, including Boltz, ProteinMPNN, MACE, DiffDock, MDAnalysis, GROMACS, and ProteinFlux.
-- **Command-template guardrails drafted**, including placeholder validation, normalized scheduler fields, reviewed-wrapper metadata, disallowed shell-fragment checks, and rendering fixtures.
+- **Manifest field policy and schema guardrails drafted**, including explicit required-field boundaries, license/citation propagation, model-weight metadata checks, placeholder validation, normalized scheduler fields, reviewed-wrapper metadata, and disallowed shell-fragment checks.
 - **7 workflow templates drafted**, with DAG and artifact-handoff validation, including GROMACS/Slurm and MACE/Slurm reviewed-wrapper workflows.
 - **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, five structured examples, Slurm execution-request coverage, BioPilot run-record crosswalk, and reviewed-wrapper guardrails for agent adoption.
 - **R0-R6 readiness levels proposed** for describing whether a tool/model is inspectable, installable, executable, citable, and reproducible.
@@ -90,6 +90,7 @@ As of 2026-07-07, OpenSciFlow is an early public draft.
 - Check the current protocol status: https://github.com/OpenSciFlow/docs/blob/main/reference/protocol-status.md
 - Review the v0.2 RFC outline: https://github.com/OpenSciFlow/docs/blob/main/reference/v0.2-rfc-outline.md
 - Review the agent skill draft: https://github.com/OpenSciFlow/opensciflow-skill
+- Review required vs optional manifest fields: https://github.com/OpenSciFlow/plugin-manifest/blob/main/docs/required-vs-optional-fields.md
 
 - Correct a project description in the landscape map.
 - Review a plugin manifest field.
