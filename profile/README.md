@@ -4,102 +4,112 @@
   <img src="assets/opensciflow-logo.svg" alt="OpenSciFlow workflow-node logo" width="96">
 </p>
 
-**OpenSciFlow is an early open initiative for making AI for Science tools easier to inspect, run, cite, validate, and reproduce on local servers and HPC systems.**
+**OpenSciFlow is an early open initiative for building verified execution capsules for AI for Science tools.**
 
-AI for Science is producing powerful models and toolkits, but practical adoption is still blocked by environment setup, model-weight provenance, unclear hardware requirements, license/citation ambiguity, weak run records, and non-reproducible reports.
+OpenSciFlow is not a write-once-run-anywhere system.
+It does not promise that scientific tools will run across all machines, CUDA versions, Conda environments, HPC modules, Slurm policies, filesystem layouts, or model-weight locations.
 
-OpenSciFlow does not aim to build another all-in-one AI Scientist.
-It starts with a simpler layer:
+Instead, OpenSciFlow makes tool requirements, environment assumptions, verification status, run records, and known failures explicit and machine-readable.
 
-> **standardized tool/model manifests + reusable workflow templates + local-first execution records.**
+> **Not write once, run anywhere.  
+> Write once, check before run, record after run.**
 
 中文定位：
 
-> OpenSciFlow 是一个面向 AI for Science 的早期开源倡议，目标是让科研模型和工具能被本地 Agent 安全调用、完整记录、正确引用，并在本地服务器或 HPC 上可复现运行。
+> OpenSciFlow 不承诺让科学工具跨环境自动运行。它要做的是把“工具需要什么、能不能跑、为什么不能跑、在哪里跑通过、这次运行如何复现”结构化、可检查、可诊断、可记录。
 
-## Correction-first
+## Correction-First
 
-OpenSciFlow is not asking the community to adopt a new standard immediately.
+OpenSciFlow is not asking the community to adopt a standard immediately.
 
 At this stage, we are asking for corrections:
 
-- Are the manifest fields sufficient?
-- Are license, citation, and model-weight metadata handled correctly?
-- Are the local-agent execution rules safe enough?
+- Are the capsule fields sufficient?
+- Are license, citation, model-weight, and dataset metadata handled correctly?
+- Are environment assumptions explicit enough?
+- Are local-agent execution rules strict enough?
 - What do real HPC / Slurm workflows require?
-- Which scientific models or tools should be described first?
-- What would users misinterpret from the current workflow outputs?
+- Which failures should be recorded as known failure cases?
+- What would users misinterpret from current workflow outputs?
 
-If you maintain an AI for Science model, workflow engine, molecular simulation tool, HPC pipeline, or reproducibility project, we especially welcome field-level corrections and missing-case reports.
+If you maintain an AI for Science model, workflow engine, molecular simulation tool, HPC pipeline, package/container system, or reproducibility project, we especially welcome field-level corrections and missing-case reports.
 
 ## What This Is
 
-OpenSciFlow is an early protocol-layer effort for AI for Science workflows.
+OpenSciFlow is an early protocol-layer effort for check-before-run and record-after-run AI for Science execution.
 
 It currently includes:
 
-- A lightweight `opensciflow.yaml` plugin manifest draft for scientific tools and models.
-- A reusable workflow-template library, starting with protein-computing workflows.
-- A skill/protocol adapter layer that teaches AI agents how to use manifests, workflow templates, and run records.
-- A curated landscape of AI for Science agents, workflow engines, model hubs, local/HPC execution tools, and reproducibility tools.
-- A local-agent execution contract that restricts execution to reviewed command templates.
-- A reference prototype called BioPilot for local protein-computing workflows.
+- A draft `opensciflow.yaml` manifest format for describing scientific tools and models.
+- A draft verified execution capsule structure that combines manifests, environment specs, reviewed command templates, smoke tests, test inputs, expected outputs, run records, verified environment matrices, and known failure cases.
+- Reusable workflow templates that define task structure, artifact handoff, report boundaries, and reproducibility requirements.
+- A local-agent execution contract that restricts agents to reviewed command templates or reviewed wrappers.
+- An OpenSciFlow Skill draft that teaches agents to inspect capsules, check environment readiness, run smoke tests when available, request approval, and write run records.
+- A BioPilot reference prototype for local protein-computing workflows.
+- A curated landscape of related AI for Science tools, workflow systems, model hubs, local/HPC execution tools, and reproducibility tools.
+
+## What This Is Not
+
+- Not a universal AI Scientist.
+- Not a guarantee that tools run across all environments.
+- Not a replacement for Docker, Conda, Apptainer, Slurm, Nextflow, Snakemake, Galaxy, CWL, AiiDA, Parsl, package managers, model hubs, or domain tools.
+- Not merely a README-to-YAML summarizer.
+- Not a claim that listed projects are partners or officially affiliated with OpenSciFlow.
+- Not a clinical, drug-discovery, or scientific truth-validation system.
 
 ## Local-Agent Safety Principle
 
 A local agent must not execute arbitrary shell commands generated by an LLM.
 
-It should execute only reviewed command templates or reviewed wrapper submissions declared in protocol artifacts, after checking inputs, environment readiness, model-weight availability, license/citation metadata, and user approval requirements.
+It should execute only reviewed command templates or reviewed wrapper submissions declared in a capsule, after checking inputs, environment readiness, model-weight availability, license/citation metadata, known failure cases, user approval requirements, and the verified environment matrix.
 
-## What This Is Not
+It must not claim reproducibility beyond the environments where evidence exists.
 
-- Not a mature ecosystem yet.
-- Not a closed AI Scientist product.
-- Not a replacement for Nextflow, Snakemake, Galaxy, CWL, AiiDA, Parsl, Slurm, Bioconda, BioContainers, Spack, Apptainer, or existing domain tools.
-- Not a clinical, diagnostic, or drug-development decision system.
-- Not a claim that listed projects are partners or officially associated with OpenSciFlow.
+## Readiness Principle
+
+Early manifests are useful for inspection, but they are not proof that a tool will run.
+
+- `R1/R2`: may reduce documentation-understanding cost.
+- `R4/R5`: may cautiously reduce trial-and-error cost in the verified environment.
+- `R6/R7`: provide stronger evidence for cross-environment migration or external reproduction.
+
+OpenSciFlow does not eliminate scientific computing failures.
+It makes them explicit, checkable, diagnosable, and recordable.
 
 ## Current Status
 
-As of 2026-07-07, OpenSciFlow is an early public draft.
+As of 2026-07-08, OpenSciFlow is an early public draft.
 
 - **83 projects mapped and assessed** across AI for Science agents, workflow engines, model hubs, package/container systems, local/HPC execution, and reproducibility tools.
 - **7 example plugin manifests drafted**, including Boltz, ProteinMPNN, MACE, DiffDock, MDAnalysis, GROMACS, and ProteinFlux.
-- **Manifest field policy and schema guardrails drafted**, including explicit required-field boundaries, license/citation propagation, model-weight metadata checks, placeholder validation, normalized scheduler fields, reviewed-wrapper metadata validation, and disallowed shell-fragment checks.
-- **7 workflow templates drafted**, with DAG, artifact-handoff, reproducibility-policy validation, and a protein-template review matrix, including GROMACS/Slurm and MACE/Slurm reviewed-wrapper workflows.
-- **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, five structured examples, Slurm execution-request coverage, Slurm workflow/execution alignment checks, coding-agent behavior review, BioPilot run-record crosswalk, and reviewed-wrapper guardrails for agent adoption.
-- **R0-R6 readiness levels proposed** for describing whether a tool/model is inspectable, installable, executable, citable, and reproducible.
-- **1 local-agent contract drafted** to restrict execution to reviewed manifest-defined commands.
-- **BioPilot prototype defined** with a protocol compliance plan, demo request schema, blocked plan-response fixture, read-only manifest/workflow artifact resolution, and run-record validation path for the first local protein-computing reference implementation.
+- **Manifest and wrapper guardrails drafted**, including required-field boundaries, license/citation propagation, model-weight metadata checks, placeholder validation, normalized scheduler fields, reviewed-wrapper metadata validation, and disallowed shell-fragment checks.
+- **7 workflow templates drafted**, with DAG, artifact-handoff, reproducibility-policy validation, and a protein-template review matrix.
+- **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, structured examples, Slurm workflow/execution alignment checks, BioPilot run-record crosswalk, and coding-agent behavior review.
+- **R0-R7 readiness levels proposed** to distinguish indexing, draft metadata, schema validation, command/environment availability, smoke tests, example runs, multi-environment verification, and external reproduction.
+- **BioPilot prototype defined** with review-only planning, read-only manifest/workflow artifact resolution, and run-record validation paths.
+- **Verified-capsules repo drafted** with a `gromacs-rmsd` capsule skeleton. This skeleton is not yet a verified R4/R5 capsule until smoke-test and example-run evidence exists.
 
 ## Entry Points
 
-- [`plugin-manifest`](https://github.com/OpenSciFlow/plugin-manifest): `opensciflow.yaml` draft standard.
+- [`verified-capsules`](https://github.com/OpenSciFlow/verified-capsules): draft capsule registry and `gromacs-rmsd` skeleton.
+- [`plugin-manifest`](https://github.com/OpenSciFlow/plugin-manifest): `opensciflow.yaml` manifest draft.
 - [`workflow-templates`](https://github.com/OpenSciFlow/workflow-templates): reusable AI for Science workflow templates.
 - [`opensciflow-skill`](https://github.com/OpenSciFlow/opensciflow-skill): agent-facing skill and protocol adapter layer.
-- [`awesome-ai4s-workflows`](https://github.com/OpenSciFlow/awesome-ai4s-workflows): curated project landscape.
+- [`docs`](https://github.com/OpenSciFlow/docs): user and contributor documentation.
 - [`biopilot-prototype`](https://github.com/OpenSciFlow/biopilot-prototype): first protein-computing reference prototype.
+- [`awesome-ai4s-workflows`](https://github.com/OpenSciFlow/awesome-ai4s-workflows): curated project landscape.
 - [`whitepaper`](https://github.com/OpenSciFlow/whitepaper): position paper drafts.
 - [`community`](https://github.com/OpenSciFlow/community): governance, outreach, and community process.
-- [`docs`](https://github.com/OpenSciFlow/docs): user and contributor documentation.
 
 ## Good First Contributions
 
-- Start from the current contribution queue: https://github.com/OpenSciFlow/community/blob/main/contribution-queue.md
-- See the near-term roadmap: https://github.com/OpenSciFlow/docs/blob/main/reference/roadmap.md
-- Check the current protocol status: https://github.com/OpenSciFlow/docs/blob/main/reference/protocol-status.md
-- Review the v0.2 RFC outline: https://github.com/OpenSciFlow/docs/blob/main/reference/v0.2-rfc-outline.md
-- Review the agent skill draft: https://github.com/OpenSciFlow/opensciflow-skill
-- Review required vs optional manifest fields: https://github.com/OpenSciFlow/plugin-manifest/blob/main/docs/required-vs-optional-fields.md
-
-- Correct a project description in the landscape map.
-- Review a plugin manifest field.
-- Review skill refusal behavior.
-- Review the Slurm reviewed-wrapper examples in OpenSciFlow Skill.
-- Suggest missing license/citation metadata.
-- Add an HPC/Slurm execution requirement.
-- Point out an unsafe local-agent behavior.
-- Propose a missing workflow template.
+- Review the verified execution capsule structure.
+- Add a known failure case for a tool or environment.
+- Review whether a capsule overclaims its readiness level.
+- Correct license, citation, dataset, or model-weight metadata.
+- Add smoke-test evidence for one environment.
+- Point out missing HPC/Slurm scheduler assumptions.
+- Review local-agent refusal behavior.
 - Tell us which workflow outputs users are likely to misinterpret.
 
 ## Maintainers
