@@ -15,7 +15,6 @@ Instead, OpenSciFlow makes tool requirements, environment assumptions, verificat
 > Write once, check before run, record after run.**
 
 中文定位：
-
 > OpenSciFlow 不承诺让科学工具跨环境自动运行。它要做的是把“工具需要什么、能不能跑、为什么不能跑、在哪里跑通过、这次运行如何复现”结构化、可检查、可诊断、可记录。
 
 ## Correction-First
@@ -87,11 +86,11 @@ As of 2026-07-08, OpenSciFlow is an early public draft.
 - **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, structured examples, Slurm workflow/execution alignment checks, BioPilot run-record crosswalk, and coding-agent behavior review.
 - **R0-R7 readiness levels proposed** to distinguish indexing, draft metadata, schema validation, command/environment availability, smoke tests, example runs, multi-environment verification, and external reproduction.
 - **BioPilot prototype defined** with review-only planning, read-only manifest/workflow artifact resolution, and run-record validation paths.
-- **Verified-capsules repo started** with one narrow `mdanalysis-rmsd` R6 capsule covering a tiny example across local Windows and GitHub Actions Ubuntu, plus a `gromacs-rmsd` R4 smoke-tested capsule. No HPC/GPU/large-trajectory portability claim is made.
+- **Verified Capsules v0.1 alpha productized** with an installable `opensciflow-capsule` CLI, quickstart, release checklist, CLI tests, one narrow `mdanalysis-rmsd` R6 capsule covering a tiny example across local Windows and GitHub Actions Ubuntu, and one narrow `gromacs-rmsd` R5 capsule covering a tiny GitHub Actions Ubuntu example. No HPC/GPU/large-trajectory portability claim is made.
 
 ## Entry Points
 
-- [`verified-capsules`](https://github.com/OpenSciFlow/verified-capsules): capsule registry with narrow `mdanalysis-rmsd` R6 evidence and `gromacs-rmsd` R4 smoke evidence.
+- [`verified-capsules`](https://github.com/OpenSciFlow/verified-capsules): alpha capsule registry with installable `opensciflow-capsule` CLI, narrow `mdanalysis-rmsd` R6 evidence, and narrow `gromacs-rmsd` R5 evidence.
 - [`docs/reference/standards-crosswalk`](https://github.com/OpenSciFlow/docs/blob/main/reference/standards-crosswalk.md): how OpenSciFlow should align with CWL, RO-Crate, workflow engines, and MCP instead of replacing them.
 - [`plugin-manifest`](https://github.com/OpenSciFlow/plugin-manifest): `opensciflow.yaml` manifest draft.
 - [`workflow-templates`](https://github.com/OpenSciFlow/workflow-templates): reusable AI for Science workflow templates.
