@@ -87,11 +87,11 @@ As of 2026-07-08, OpenSciFlow is an early public draft.
 - **OpenSciFlow Skill drafted**, with schemas, prompts, refusal tests, structured examples, Slurm workflow/execution alignment checks, BioPilot run-record crosswalk, and coding-agent behavior review.
 - **R0-R7 readiness levels proposed** to distinguish indexing, draft metadata, schema validation, command/environment availability, smoke tests, example runs, multi-environment verification, and external reproduction.
 - **BioPilot prototype defined** with review-only planning, read-only manifest/workflow artifact resolution, and run-record validation paths.
-- **Verified-capsules repo started** with one `mdanalysis-rmsd` R5 capsule containing tiny example outputs and run records from local venv and local Conda environments, plus a `gromacs-rmsd` R3 skeleton with a blocked local readiness record. No R6 cross-environment portability claim is made.
+- **Verified-capsules repo started** with one narrow `mdanalysis-rmsd` R6 capsule covering a tiny example across local Windows and GitHub Actions Ubuntu, plus a `gromacs-rmsd` R3 skeleton with a blocked local readiness record. No HPC/GPU/large-trajectory portability claim is made.
 
 ## Entry Points
 
-- [`verified-capsules`](https://github.com/OpenSciFlow/verified-capsules): capsule registry with `mdanalysis-rmsd` local R5 evidence and `gromacs-rmsd` R3 skeleton.
+- [`verified-capsules`](https://github.com/OpenSciFlow/verified-capsules): capsule registry with narrow `mdanalysis-rmsd` R6 evidence and `gromacs-rmsd` R3 skeleton.
 - [`docs/reference/standards-crosswalk`](https://github.com/OpenSciFlow/docs/blob/main/reference/standards-crosswalk.md): how OpenSciFlow should align with CWL, RO-Crate, workflow engines, and MCP instead of replacing them.
 - [`plugin-manifest`](https://github.com/OpenSciFlow/plugin-manifest): `opensciflow.yaml` manifest draft.
 - [`workflow-templates`](https://github.com/OpenSciFlow/workflow-templates): reusable AI for Science workflow templates.
